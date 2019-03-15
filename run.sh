@@ -8,7 +8,7 @@
 # Constants:
 CONTAINER_NAME=${PWD##*/}
 # The name of the image is based on the name of the folder
-IMAGE_NAME=intersystemsdc/irisdemo-base-irihealthint-community:stable
+IMAGE_NAME=intersystemsdc/irisdemo-base-irishealthint-community:stable
 
 printf "\n\nRunning container. Management portal is on http://localhost:52773/csp/sys/UtilHome.csp\n\n"
 
