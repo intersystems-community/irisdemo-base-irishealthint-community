@@ -2,7 +2,7 @@
 # They were deleted on 2018.2 and were neessary for iKnow Portals to work
 FROM intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable
 
-FROM store/intersystems/iris:2019.1.0.510.0-community
+FROM intersystemsdc/irisdemo-base-irishealthint-community:2019.1.0-released-community
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
 # Copy deleted files from 2018.1.1 into 2018.2:

@@ -24,6 +24,7 @@ set -e
 
 printf "\n Configuring alternate journal directory..."
 sed -i "s/AlternateDirectory=.*/AlternateDirectory=\/usr\/irissys\/mgr\/journal2\//" /usr/irissys/iris.cpf
+rm -rf /usr/irissys/mgr/journal2/
 mkdir /usr/irissys/mgr/journal2/ 
 chown root:irisusr /usr/irissys/mgr/journal2
 chmod g+w /usr/irissys/mgr/journal2
