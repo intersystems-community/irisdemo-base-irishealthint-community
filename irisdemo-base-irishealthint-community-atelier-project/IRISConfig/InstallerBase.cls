@@ -53,17 +53,7 @@ Class IRISConfig.InstallerBase [ Abstract ]
 			Set tSourceDir=$System.Util.GetEnviron("IRIS_APP_SOURCEDIR")
 			If tSourceDir'="" Set pVars("SourceDir")=tSourceDir
 			
-			Set pVars("Namespace")=$System.Util.GetEnviron("IRIS_APP_NAME")
-			If pVars("Namespace")=""
-			{
-				Set pVars("Namespace")="USER"
-				Set pVars("UseUSERNamespace")=1
-			}
-			Else
-			{
-				Set pVars("UseUSERNamespace")=0
-			}
-			
+			Set pVars("Namespace")="user"			
 			Set pVars("CSPAppName")=$ZConvert(pVars("Namespace"),"L")
 			
 			Set tSC = ..setup(.pVars, 2)

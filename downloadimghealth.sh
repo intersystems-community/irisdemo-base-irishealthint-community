@@ -5,8 +5,9 @@
 # Parameters
 #
 IMAGE=irishealth
-TAG=intersystemsdc/irisdemo-base-irishealthint-community:$IMAGE.2019.1.0-stable
-QUAYTAG=2019.1.0S.111.0
+TAG=intersystemsdc/irisdemo-base-irishealthint-community:2019.1.0-released-community
+#QUAYTAG=2019.1.0S.111.0
+QUAYTAG=2019.1.0-released-community
 
 function dockerLogin() {
     printf "\n\nDocker Credentials:\n"
@@ -58,7 +59,7 @@ dockerLogin docker.iscinternal.com
 printf "\n\nPulling 2018.1.1 image so we can extract iKnow related resources from it...\n"
 docker pull docker.iscinternal.com/intersystems/iris:2018.1.1-stable
 if [ $? -eq 0 ]; then 
-    printfG "\nPull of docker.iscinternal.com/intersystems/iris:2018.1.1-stable succesful. \n"
+    printf "\nPull of docker.iscinternal.com/intersystems/iris:2018.1.1-stable succesful. \n"
 else
     printfR "\nPull of docker.iscinternal.com/intersystems/iris:2018.1.1-stable failed. \n"
     exit 0
@@ -91,7 +92,7 @@ fi
 
 docker tag docker.iscinternal.com/intersystems/iris:2018.1.1-stable intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable
 if [ $? -eq 0 ]; then 
-    printfG "\Tagging of docker.iscinternal.com/intersystems/iris:2018.1.1-stable as intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable successful\n"
+    printf "\Tagging of docker.iscinternal.com/intersystems/iris:2018.1.1-stable as intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable successful\n"
 else
     printfR "\Tagging of docker.iscinternal.com/intersystems/iris:2018.1.1-stable as intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable failed\n"
     exit 0
@@ -112,7 +113,7 @@ fi
 
 docker push intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable
 if [ $? -eq 0 ]; then 
-    printfG "\Pushing of intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable successful.\n"
+    printf "\Pushing of intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable successful.\n"
 else
     printfR "\Pushing of intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable successful.\n"
     exit 0

@@ -2,7 +2,7 @@
 # They were deleted on 2018.2 and were neessary for iKnow Portals to work
 FROM intersystemsdc/irisdemo-base-irishealthint-community:iris.2018.1.1-stable
 
-FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth.2019.1.0-stable
+FROM store/intersystems/iris:2019.1.0.510.0-community
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
 # Copy deleted files from 2018.1.1 into 2018.2:
@@ -37,15 +37,11 @@ ARG IRIS_PROJECT_FOLDER_NAME
 # to load into the CSP application.
 ENV IRIS_APP_SOURCEDIR=/tmp/iris_project/
 
-# Name of the application. This will be used to define the namespace, database and 
-# name of the CSP application of this application.
-ENV IRIS_APP_NAME="APPINT"
-
 # Used by runinstaller.sh to load the installer manifest class and run it
 ENV IRIS_USERNAME="SuperUser" 
 
 # Used by runinstaller.sh and to set instance's default password (this is just a demo!)
-ENV IRIS_PASSWORD="sys"
+ENV IRIS_PASSWORD="SYS"
 
 # This is an image for using with demos. I don't care about protecting the password. I just
 # want all instances to have the same password.
