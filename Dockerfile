@@ -1,4 +1,5 @@
-FROM store/intersystems/irishealth:2019.3.0.308.0-community
+#FROM store/intersystems/irishealth:2019.3.0.308.0-community
+FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth.2019.3.0.308.0-community
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
