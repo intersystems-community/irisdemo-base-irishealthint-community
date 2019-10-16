@@ -1,7 +1,8 @@
 #!/bin/bash
 
-IMAGE_NAME=intersystemsdc/irisdemo-base-irishealthint-community:2019.1.0-released-community
+IRIS_PROJECT_FOLDER_NAME=irishealthdemoint-atelier-project
+GIT_REPO_NAME=irisdemo-base-irishealthint-community
+TAG=2019.3-1.0
+IMAGE_NAME=intersystemsdc/$GIT_REPO_NAME:$TAG
 
-IRIS_PROJECT_FOLDER_NAME=irisdemo-base-irishealthint-community-atelier-project
-
-docker build --build-arg IRIS_PROJECT_FOLDER_NAME=$IRIS_PROJECT_FOLDER_NAME -t $IMAGE_NAME . 
+docker build --squash --build-arg IRIS_PROJECT_FOLDER_NAME=$IRIS_PROJECT_FOLDER_NAME --force-rm -t $IMAGE_NAME . 
