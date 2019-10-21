@@ -1,10 +1,12 @@
 #!/bin/bash
 #
-# This script is no longer necessary now that IRIS for Health Community 2019.3 is 
-# publicly available on the Docker Store.
+# This script should not no longer be necessary now that IRIS for Health Community 2019.3 is 
+# publicly available on the Docker Store. But the problem is that we are facing problems when 
+# running automated builds configured on Docker Hub with images based on the ones published 
+# on store/intersystems/iris or store/intersystems/irishealth. 
 #
-# Before that, we would have to pull it from our internal docker registry and
-# push it to our private docker registry repo.
+# If we just copy the base image from InterSystems to our own repo, the automated build works.
+#
 
 #
 # Parameter
@@ -14,14 +16,12 @@ TAG=2019.3.0.308.0
 #
 # Constants
 #
-ISC_IMAGENAME=store/intersystems/irishealth:$TAG-community
+
+# Taking from InterSystems repository on Docker Hub:
 DH_IMAGENAME=intersystemsdc/irisdemo-base-irishealthint-community:irishealth.$TAG-community
 
-# printf "\nDeleting old images...\n"
-
-# docker images | grep $OLDTAG | awk '{print $3}' | xargs docker rmi -f
-
-# printf "\nOld images deleted.\n"
+# Pushing to our repository on Docker Hub:
+ISC_IMAGENAME=store/intersystems/irishealth:$TAG-community
 
 printf "\n\nLoggin into docker.iscinternal.com (VPN Required!) to download newer images...\n"
 docker login docker.iscinternal.com

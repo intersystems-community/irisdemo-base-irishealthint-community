@@ -9,7 +9,7 @@ git:
 
 # safelist
 branches:
-  only:
+  only: # Example: v1.3
   - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 
 script:
