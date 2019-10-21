@@ -18,10 +18,10 @@ TAG=2019.3.0.308.0
 #
 
 # Taking from InterSystems repository on Docker Hub:
-DH_IMAGENAME=intersystemsdc/irisdemo-base-irishealthint-community:irishealth.$TAG-community
+ISC_IMAGENAME=store/intersystems/irishealth:$TAG-community
 
 # Pushing to our repository on Docker Hub:
-ISC_IMAGENAME=store/intersystems/irishealth:$TAG-community
+DH_IMAGENAME=intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.$TAG
 
 printf "\n\nLoggin into docker.iscinternal.com (VPN Required!) to download newer images...\n"
 docker login docker.iscinternal.com
