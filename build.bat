@@ -1,8 +1,8 @@
 @ECHO OFF
 
-set IRIS_PROJECT_FOLDER_NAME=irishealthdemoint-atelier-project
-set GIT_REPO_NAME=irisdemo-base-irishealthint-community
-set TAG=2019.3-latest
-set IMAGE_NAME=intersystemsdc/%GIT_REPO_NAME%:%TAG%
+SET DOCKER_REPO=intersystemsdc/irisdemo-base-irishealthint-community
+set /p VERSION=<VERSION
+set PWD=%~dp0
 
-docker build --squash --build-arg IRIS_PROJECT_FOLDER_NAME=%IRIS_PROJECT_FOLDER_NAME% --force-rm -t %IMAGE_NAME% .
+echo
+docker build -t %DOCKER_REPO%:version-%VERSION% .

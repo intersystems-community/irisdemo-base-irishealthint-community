@@ -11,14 +11,14 @@
 #
 # Parameter
 #
-TAG=2019.3.0.308.0
+TAG=2019.4.0.379.0
 
 #
 # Constants
 #
 
 # Taking from InterSystems repository on Docker Hub:
-ISC_IMAGENAME=store/intersystems/irishealth:$TAG-community
+ISC_IMAGENAME=store/intersystems/irishealth-community:$TAG
 
 # Pushing to our repository on Docker Hub:
 DH_IMAGENAME=intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.$TAG
