@@ -1,5 +1,15 @@
 #FROM store/intersystems/irishealth:2019.3.0.308.0-community
-FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2019.4.0.379.0
+#FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2019.4.0.379.0
+#
+# FIX THIS LATER!!!!!
+# 
+# This should be IRIS for Health. For now, Integrated ML is not available on IRIS for Health
+# so we are using IRIS instead. Fortunately, the riskengine box on the readmission demo doesn't rely
+# on anything specific from IRIS for Health so we should be fine. 
+#
+# When we are done, we should replace this for a COMMUNITY version of IRIS for Health that has Integrated ML on it.
+#
+FROM docker.iscinternal.com/intersystems/iris:2020.2.0ML.243.0
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
