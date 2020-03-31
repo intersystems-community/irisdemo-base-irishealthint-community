@@ -1,6 +1,11 @@
-#FROM store/intersystems/irishealth:2019.3.0.308.0-community
-FROM store/intersystems/irishealth-community:2020.1.0.209.0
-#FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2019.4.0.379.0
+# I can't use IRIS for Health Community directly from Docker Store because I am getting an error
+# when docker auto build runs:
+#
+# Get https://registry-1.docker.io/v2/store/intersystems/irishealth-community/manifests/2020.1.0.209.0: received unexpected HTTP status: 500 Internal Server Error
+# build hook failed! (1)
+#
+#FROM store/intersystems/irishealth-community:2020.1.0.209.0
+FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2020.1.0.209.0
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
