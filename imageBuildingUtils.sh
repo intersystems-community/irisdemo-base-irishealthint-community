@@ -129,8 +129,8 @@ remove_journals() {
 
 	# Journal files will not exist if we've only run in single-user mode,
 	# and this is okay, so we rm with -f
-	rm -f "$ISC_PACKAGE_INSTALLDIR"/mgr/journal/* 
-	exit_if_error "Could not remove journal files"
+	# rm -f "$ISC_PACKAGE_INSTALLDIR"/mgr/journal/* 
+	# exit_if_error "Could not remove journal files"
 
 	return 0;
 }
