@@ -5,7 +5,7 @@
 # build hook failed! (1)
 #
 FROM store/intersystems/irishealth-community:2020.3.0.200.0
-#FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2020.1.0.209.0
+#FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2020.3.0.200.0
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 

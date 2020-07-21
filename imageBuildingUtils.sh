@@ -107,13 +107,13 @@ remove_WIJ() {
 remove_logs() {
     assert_defined "ISC_PACKAGE_INSTALLDIR"
 
-    rm -f $ISC_PACKAGE_INSTALLDIR/mgr/journal.log
-    exit_if_error "Could not remove journal.log"
+    #> $ISC_PACKAGE_INSTALLDIR/mgr/journal.log
+    #exit_if_error "Could not remove journal.log"
 
-    rm -f $ISC_PACKAGE_INSTALLDIR/mgr/alerts.log
+    > $ISC_PACKAGE_INSTALLDIR/mgr/alerts.log
     exit_if_error "Could not remove alerts.log"
 
-    rm -f $ISC_PACKAGE_INSTALLDIR/mgr/messages.log
+    > $ISC_PACKAGE_INSTALLDIR/mgr/messages.log
     exit_if_error "Could not remove messages.log"
 }
 
