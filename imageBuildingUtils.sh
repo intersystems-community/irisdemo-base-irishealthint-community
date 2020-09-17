@@ -110,8 +110,8 @@ remove_logs() {
     #> $ISC_PACKAGE_INSTALLDIR/mgr/journal.log
     #exit_if_error "Could not remove journal.log"
 
-    > $ISC_PACKAGE_INSTALLDIR/mgr/alerts.log
-    exit_if_error "Could not remove alerts.log"
+    #> $ISC_PACKAGE_INSTALLDIR/mgr/alerts.log
+    #exit_if_error "Could not remove alerts.log"
 
     > $ISC_PACKAGE_INSTALLDIR/mgr/messages.log
     exit_if_error "Could not remove messages.log"
