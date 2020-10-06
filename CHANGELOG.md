@@ -1,7 +1,5 @@
-## 1.8.0 (July 21, 2020)
-  - initial changes
-  - Adding --init to example on README.md
-  - Fixing bumpversion.sh
+## 1.8.0 (October 06, 2020)
+  - now using IRIS For Health Community 2020.3
 
 ## 1.7.1 (March 30, 2020)
   - Based on IRIS 2020.1.0.209.0
