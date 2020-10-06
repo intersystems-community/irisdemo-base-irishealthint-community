@@ -1,3 +1,9 @@
+## 1.8.1 (October 06, 2020)
+  - Bump version to 1.8.0.
+  - now using IRIS For Health Community 2020.3
+  - updated IRIS version again
+  - Updated to work with new journaling requirements
+
 ## 1.8.0 (October 06, 2020)
   - now using IRIS For Health Community 2020.3
 
