@@ -1,3 +1,6 @@
+## 1.9.0 (January 05, 2021)
+  - added IntegratedML
+
 ## 1.8.1 (October 06, 2020)
   - Bump version to 1.8.0.
   - now using IRIS For Health Community 2020.3
