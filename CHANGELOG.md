@@ -1,3 +1,6 @@
+## 1.9.1 (January 06, 2021)
+  - Updated to intersystemsdc version of IRIS Community with ML
+
 ## 1.9.0 (January 05, 2021)
   - added IntegratedML
 
