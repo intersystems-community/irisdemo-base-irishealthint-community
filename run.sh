@@ -10,7 +10,7 @@ printf "\n\t Simulator page is on http://localhost:52773/csp/appint/demo.csp"
 printf "\n\t InterSystems IRIS Web Server Port is on 52773."
 printf "\n\t InterSystems IRIS Super Server Port is on 51773."
 
-docker run -it --init --rm \
+docker run -it --rm \
     -p 51773:51773 -p 52773:52773 -p 1883:1883 \
     --name irishealth-community \
     ${DOCKER_REPO}:version-${VERSION}

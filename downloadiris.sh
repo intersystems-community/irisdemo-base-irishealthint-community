@@ -13,13 +13,14 @@
 #
 #TAG=2019.4.0.379.0
 #TAG=2020.1.0.197.0
-TAG=2020.1.0.209.0
+# TAG=2020.1.0.209.0
+TAG=2021.2.0.619.0
 #
 # Constants
 #
 
 # Taking from InterSystems repository on Docker Hub:
-ISC_IMAGENAME=store/intersystems/irishealth-community:$TAG
+ISC_IMAGENAME=arti.iscinternal.com/intersystems/irishealth-community:$TAG
 
 # Pushing to our repository on Docker Hub:
 DH_IMAGENAME=intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.$TAG

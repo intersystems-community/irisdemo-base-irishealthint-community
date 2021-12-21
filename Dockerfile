@@ -5,19 +5,19 @@
 # build hook failed! (1)
 #
 #FROM store/intersystems/irishealth-community:2020.1.0.209.0
-FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2020.1.0.209.0
+FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.619.0
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
+# Changing to root so we can add the files and then use the chown command to 
+# change the permissions to irisowner/irisowner.
 # Get Java OpenJDK 1.8 for JDBC and/or Java Gateway, which must run as root user
 USER root
+
 RUN apt-get -y update && \
     apt-get install --no-install-recommends -y openjdk-8-jre-headless ca-certificates-java && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-
-# Going back to irisowner now
-USER irisowner
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 
@@ -37,16 +37,19 @@ ENV IRIS_GLOBAL_BUFFERS=128
 ENV IRIS_ROUTINE_BUFFERS=64
 
 # Adding source code that will be loaded by the installer
-# The ADD command ignores the current USER and always add as root. 
-# That is why were are doing the chown
-ADD --chown=irisowner:irisuser ./${IRIS_PROJECT_FOLDER_NAME}/ $IRIS_APP_SOURCEDIR
+# In order for the ADD command to add the files in the image with the correct user
+# We need to be running the ADD command with the root user and use the --chown parameter
+ADD --chown=irisowner/irisuser ./${IRIS_PROJECT_FOLDER_NAME}/ $IRIS_APP_SOURCEDIR
 
 # Adding scripts to load base image source and child image source
-ADD ./imageBuildingUtils.sh $ISC_PACKAGE_INSTALLDIR/demo/imageBuildingUtils.sh
-ADD ./irisdemobaseinstaller.sh $ISC_PACKAGE_INSTALLDIR/demo/irisdemobaseinstaller.sh
-ADD ./irisdemoinstaller.sh $ISC_PACKAGE_INSTALLDIR/demo/irisdemoinstaller.sh
+ADD --chown=irisowner/irisuser ./imageBuildingUtils.sh /demo/imageBuildingUtils.sh
+ADD --chown=irisowner/irisuser ./irisdemobaseinstaller.sh /demo/irisdemobaseinstaller.sh
+ADD --chown=irisowner/irisuser ./irisdemoinstaller.sh /demo/irisdemoinstaller.sh
+
+# Now we change back to irisowner so that the RUN command will be run with this user
+USER irisowner
 
 # This must be called only on this base images. Child images must call irisdemoinstaller.sh instead.
-RUN $ISC_PACKAGE_INSTALLDIR/demo/irisdemobaseinstaller.sh
+RUN /demo/irisdemobaseinstaller.sh
 
 HEALTHCHECK --interval=5s CMD /irisHealth.sh || exit 1
