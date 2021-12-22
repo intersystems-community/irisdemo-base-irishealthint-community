@@ -1,4 +1,5 @@
-## 1.10.0 (December 21, 2021)
+## 1.10.1 (December 22, 2021)
+  - Solving non-root issues related to IRIS 2021.2.0.619
   - Bumping base iris to IRIS 2021.2.0.619
 
 ## 1.8.0 (December 21, 2021)
