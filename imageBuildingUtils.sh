@@ -112,9 +112,6 @@ remove_logs() {
 
     rm -f $ISC_PACKAGE_INSTALLDIR/mgr/alerts.log
     exit_if_error "Could not remove alerts.log"
-
-    rm -f $ISC_PACKAGE_INSTALLDIR/mgr/messages.log
-    exit_if_error "Could not remove messages.log"
 }
 
 remove_iris_ids() {
