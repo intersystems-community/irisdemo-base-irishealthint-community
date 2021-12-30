@@ -1,3 +1,6 @@
+## 1.10.2 (December 30, 2021)
+  - Can not remove messages.log or IRIS will not start anymore.
+
 ## 1.10.1 (December 22, 2021)
   - Solving non-root issues related to IRIS 2021.2.0.619
   - Bumping base iris to IRIS 2021.2.0.619
