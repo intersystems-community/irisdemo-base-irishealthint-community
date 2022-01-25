@@ -1,3 +1,6 @@
+## 1.10.3 (January 25, 2022)
+  - Bumping IRIS version to 2021.2.0.649.0
+
 ## 1.10.2 (December 30, 2021)
   - Can not remove messages.log or IRIS will not start anymore.
 
