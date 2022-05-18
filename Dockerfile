@@ -4,9 +4,10 @@
 # Get https://registry-1.docker.io/v2/store/intersystems/irishealth-community/manifests/2020.1.0.209.0: received unexpected HTTP status: 500 Internal Server Error
 # build hook failed! (1)
 #
-#FROM store/intersystems/irishealth-community:2020.1.0.209.0
+# FROM store/intersystems/irishealth-community:2020.1.0.209.0
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.619.0
-FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.649.0
+# FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.649.0
+FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2022.1.0.191.0
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
