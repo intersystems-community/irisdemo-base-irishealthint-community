@@ -1,3 +1,6 @@
+## 1.11.1 (October 06, 2022)
+  - Adding support for ARM processors.
+
 ## 1.11.0 (May 18, 2022)
   - Bumping the version of IRIS to 2022.1.0.191.0
 
