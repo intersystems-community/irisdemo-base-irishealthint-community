@@ -1,3 +1,6 @@
+## 1.11.2 (October 06, 2022)
+  - Adding dummy Dockerfile so that docker hub will accept this and build both images for us.
+
 ## 1.11.1 (October 06, 2022)
   - Adding support for ARM processors.
 
