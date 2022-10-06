@@ -13,5 +13,9 @@ echo "   DOCKER_TAG     : $DOCKER_TAG"
 echo "   DOCKER_TAG     : $IMAGE_NAME"
 
 echo
-docker build -t ${DOCKER_REPO}:${DOCKER_TAG} .
-docker build -t ${DOCKER_REPO}:latest .
+
+docker build -f ./Dockerfile.x86 -t ${DOCKER_REPO}:${DOCKER_TAG} .
+docker build -f ./Dockerfile.x86 -t ${DOCKER_REPO}:latest .
+
+docker build -f ./Dockerfile.ARM -t ${DOCKER_REPO}:arm-${DOCKER_TAG} .
+docker build -f ./Dockerfile.ARM -t ${DOCKER_REPO}:arm-latest .

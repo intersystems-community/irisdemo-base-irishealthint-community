@@ -13,6 +13,6 @@ printf "\n\t InterSystems IRIS Super Server Port is on 51773."
 docker run -it --rm \
     -p 51773:51773 -p 52773:52773 -p 1883:1883 \
     --name irishealth-community \
-    ${DOCKER_REPO}:version-${VERSION}
+    ${DOCKER_REPO}:arm-version-${VERSION} --check-caps false
 
 printf "\nExited container\n"

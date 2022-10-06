@@ -5,3 +5,6 @@ set -e
 echo
 docker push ${DOCKER_REPO}:${DOCKER_TAG}
 docker push ${DOCKER_REPO}:latest
+
+docker push ${DOCKER_REPO}:arm-${DOCKER_TAG}
+docker push ${DOCKER_REPO}:arm-latest

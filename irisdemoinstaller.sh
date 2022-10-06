@@ -1,9 +1,4 @@
-#!/bin/bash
-#
-# Amir Samary - 2019
-#
-# This must not be used on production. 
-#
+
 
 source /demo/imageBuildingUtils.sh
 
