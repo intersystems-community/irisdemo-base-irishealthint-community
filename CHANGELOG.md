@@ -1,3 +1,6 @@
+## 1.11.3 (October 12, 2022)
+  - Changing build script to use "docker buildx" instead of "docker build" so we can build images for both x86 and ARM
+
 ## 1.11.2 (October 06, 2022)
   - Adding dummy Dockerfile so that docker hub will accept this and build both images for us.
 
