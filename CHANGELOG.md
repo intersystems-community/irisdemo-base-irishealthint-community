@@ -1,3 +1,6 @@
+## 1.11.5 (October 18, 2022)
+  - Upgrading QEMU to 7.0.0
+
 ## 1.11.4 (October 18, 2022)
   - Adding support for ARM
 
