@@ -14,8 +14,8 @@ echo "   DOCKER_TAG     : $IMAGE_NAME"
 
 echo
 
-docker buildx build  --platform linux/amd64 -f ./amd64.dockerfile -t ${DOCKER_REPO}:amd64-${DOCKER_TAG} .
-docker buildx build  --platform linux/amd64 -f ./amd64.dockerfile -t ${DOCKER_REPO}:amd64-latest .
+# docker buildx build  --platform linux/amd64 -f ./amd64.dockerfile -t ${DOCKER_REPO}:amd64-${DOCKER_TAG} .
+# docker buildx build  --platform linux/amd64 -f ./amd64.dockerfile -t ${DOCKER_REPO}:amd64-latest .
 
 docker buildx build --platform linux/arm64 -f ./arm64.dockerfile -t ${DOCKER_REPO}:arm64-${DOCKER_TAG} .
 docker buildx build --platform linux/arm64 -f ./arm64.dockerfile -t ${DOCKER_REPO}:arm64-latest .
