@@ -3,8 +3,8 @@
 set -e 
 
 echo
-# docker push ${DOCKER_REPO}:amd64-${DOCKER_TAG}
-# docker push ${DOCKER_REPO}:amd64-latest
+docker push ${DOCKER_REPO}:amd64-${DOCKER_TAG}
+docker push ${DOCKER_REPO}:amd64-latest
 
 docker push ${DOCKER_REPO}:arm64-${DOCKER_TAG}
 docker push ${DOCKER_REPO}:arm64-latest
