@@ -1,3 +1,6 @@
+## 1.11.6 (October 18, 2022)
+  - Upgrading QEMU to 7.0.0
+
 ## 1.11.5 (October 18, 2022)
   - Upgrading QEMU to 7.0.0
 
