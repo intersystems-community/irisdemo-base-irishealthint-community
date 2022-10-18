@@ -1,3 +1,6 @@
+## 1.11.4 (October 18, 2022)
+  - Adding support for ARM
+
 ## 1.11.3 (October 12, 2022)
   - Changing build script to use "docker buildx" instead of "docker build" so we can build images for both x86 and ARM
 
