@@ -1,3 +1,8 @@
+## 1.11.7 (October 20, 2022)
+  - Bumping IRIS version to 2022.1.0.209.0-zpm
+  - Adding missing #!/bin/bash to irisdemoinstaller.sh
+  - Adding push scripts.
+
 ## 1.11.6 (October 18, 2022)
   - Upgrading QEMU to 7.0.0
 
