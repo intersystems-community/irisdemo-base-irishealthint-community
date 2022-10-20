@@ -13,7 +13,7 @@ RUN apk add curl && curl -L ${QEMU_URL} | tar zxvf - -C . --strip-components 1
 # FROM store/intersystems/irishealth-community:2020.1.0.209.0
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.619.0
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.649.0
-FROM intersystemsdc/irishealth-community-arm64
+FROM intersystemsdc/irishealth-community-arm64:2022.1.0.209.0-zpm
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
