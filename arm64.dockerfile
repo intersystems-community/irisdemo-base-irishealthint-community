@@ -1,19 +1,7 @@
-FROM alpine AS builder
-
-# Download QEMU, see https://github.com/docker/hub-feedback/issues/1261
-ENV QEMU_URL https://github.com/balena-io/qemu/releases/download/v7.0.0%2Bbalena1/qemu-7.0.0.balena1-aarch64.tar.gz
-RUN apk add curl && curl -L ${QEMU_URL} | tar zxvf - -C . --strip-components 1
-
-# I can't use IRIS for Health Community directly from Docker Store because I am getting an error
-# when docker auto build runs:
-#
-# Get https://registry-1.docker.io/v2/store/intersystems/irishealth-community/manifests/2020.1.0.209.0: received unexpected HTTP status: 500 Internal Server Error
-# build hook failed! (1)
-#
 # FROM store/intersystems/irishealth-community:2020.1.0.209.0
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.619.0
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.649.0
-FROM intersystemsdc/irishealth-community-arm64:2022.1.0.209.0-zpm
+FROM containers.intersystems.com/intersystems/irishealth-community:2023.1.0.235.1-linux-arm64v8
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
