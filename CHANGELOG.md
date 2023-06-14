@@ -1,3 +1,6 @@
+## 1.12.0 (June 14, 2023)
+  - Bumping IRIS version to 2023.2
+
 ## 1.11.7 (October 20, 2022)
   - Bumping IRIS version to 2022.1.0.209.0-zpm
   - Adding missing #!/bin/bash to irisdemoinstaller.sh
