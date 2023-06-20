@@ -10,12 +10,14 @@ LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 # Get Java OpenJDK 1.8 for JDBC and/or Java Gateway, which must run as root user
 USER root
 
-RUN apt-get -y update && \
-    apt-get install --no-install-recommends -y openjdk-8-jre-headless ca-certificates-java && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Our base image brings a JVM already
+#
+# RUN apt-get -y update && \
+#     apt-get install --no-install-recommends -y openjdk-8-jre-headless ca-certificates-java && \
+#     apt-get clean && \
+#     rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/$(ls /usr/lib/jvm)
 
 # Name of the project folder 
 ARG IRIS_PROJECT_FOLDER_NAME=irishealthdemoint-atelier-project
