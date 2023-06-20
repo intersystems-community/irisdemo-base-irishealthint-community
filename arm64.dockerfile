@@ -1,7 +1,7 @@
 # FROM store/intersystems/irishealth-community:2020.1.0.209.0
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.619.0
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.649.0
-FROM containers.intersystems.com/intersystems/irishealth-community:2023.1.0.235.1-linux-arm64v8
+FROM containers.intersystems.com/intersystems/irishealth-community:2023.2.0.200.0-linux-arm64v8
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
