@@ -3,6 +3,11 @@
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.649.0
 FROM containers.intersystems.com/intersystems/irishealth-community:2023.2.0.200.0-linux-arm64v8
 
+# For some reason, on the ARM base image, the link from /bin/sh to /bin/dash is not there
+# That causes all RUN commands below in the Dockerfile to fail. So instead of using /bin/sh
+# as shell, I will change this to use /bin/bash.
+ENV SHELL=/bin/bash
+
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
 # Changing to root so we can add the files and then use the chown command to 
