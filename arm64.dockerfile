@@ -6,7 +6,7 @@ FROM containers.intersystems.com/intersystems/irishealth-community:2023.2.0.200.
 # For some reason, on the ARM base image, the link from /bin/sh to /bin/dash is not there
 # That causes all RUN commands below in the Dockerfile to fail. So instead of using /bin/sh
 # as shell, I will change this to use /bin/bash.
-RUN ["/bin/bash", "-c", "cp /bin/dash /bin/sh"]
+# RUN ls -l /bin
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 
