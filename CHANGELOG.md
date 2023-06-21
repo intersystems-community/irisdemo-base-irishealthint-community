@@ -1,3 +1,6 @@
+## 1.12.4 (June 21, 2023)
+  - Fixing issue with /bin/sh that would prevent us from building the ARM image on docker hub.
+
 ## 1.12.3 (June 21, 2023)
   - Fixing issue with /bin/sh that would prevent us from building the ARM image on docker hub.
 
