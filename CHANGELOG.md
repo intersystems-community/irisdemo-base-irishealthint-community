@@ -1,3 +1,6 @@
+## 1.13.0 (May 23, 2024)
+  - Upgrading to IRIS 2024.1
+
 ## 1.12.5 (June 21, 2023)
   - Disabling building for ARM because of issue related to absense of /bin/sh
 
