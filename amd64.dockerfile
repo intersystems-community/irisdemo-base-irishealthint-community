@@ -1,4 +1,4 @@
-FROM containers.intersystems.com/intersystems/irishealth-community:2024.1
+FROM containers.intersystems.com/intersystems/irishealth-community:2025.1
 
 LABEL maintainer="Amir Samary <amir.samary@intersystems.com>"
 

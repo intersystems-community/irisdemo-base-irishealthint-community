@@ -2,7 +2,7 @@
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.619.0
 # FROM intersystemsdc/irisdemo-base-irishealthint-community:irishealth-community.2021.2.0.649.0
 # FROM containers.intersystems.com/intersystems/irishealth-community:2023.2.0.200.0-linux-arm64v8
-FROM containers.intersystems.com/intersystems/irishealth-community:2024.1
+FROM containers.intersystems.com/intersystems/irishealth-community:2025.1
 
 # For some reason, on the ARM base image, the link from /bin/sh to /bin/dash is not there
 # That causes all RUN commands below in the Dockerfile to fail. So instead of using /bin/sh
